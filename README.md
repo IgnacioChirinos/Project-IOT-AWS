@@ -15,6 +15,8 @@ Para realizar el siguiente proyecto se necesitará los siguientes materiales:
 
 El framework utilizado será el siguiente:
 
+<img src="https://github.com/IgnacioChirinos/Project-IOT-AWS/blob/main/DataFlow.PNG"  width="600" height="300">
+
 1. **IoT Core**
 
 Se comenzará realizando las configuraciones necesarias en AWS IoT Core
