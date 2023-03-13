@@ -66,3 +66,4 @@ Ahora regresaremos a la función Lambda y en la parte del código se usó el sig
 1. **Resultados**
 
 Lo que se espera en DynamoDB al correr en el código en Raspberry es lo siguiente.
+![alt text](https://github.com/IgnacioChirinos/Project-IOT-AWS/edit/main/image.jpg?raw=true)
