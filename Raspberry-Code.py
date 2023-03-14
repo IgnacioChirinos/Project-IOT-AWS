@@ -8,7 +8,7 @@ import Adafruit_DHT #Import DHT Library for sensor
 myMQTTClient = AWSIoTMQTTClient("RishabClientID") #random key, if another connection using the same key is opened the previous one is auto closed by AWS IOT
 myMQTTClient.configureEndpoint("a1l83aslu1wtwg-ats.iot.us-east-1.amazonaws.com", 8883)  #se configura el endpoint y el Puerto de aws 
 
-myMQTTClient.configureCredentials("CA1.pem", "private.pem.key", "-ertificate.pem.crt") #en esta parte configuraremos las keys que se descargaron de AWS IoT Core
+myMQTTClient.configureCredentials("CA1.pem", "private.pem.key", "certificate.pem.crt") #en esta parte configuraremos las keys que se descargaron de AWS IoT Core
 myMQTTClient.configureOfflinePublishQueueing(-1) # Infinite offline Publish queueing
 myMQTTClient.configureDrainingFrequency(2) # Draining: 2 Hz
 myMQTTClient.configureConnectDisconnectTimeout(10) # 10 sec
