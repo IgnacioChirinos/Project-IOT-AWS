@@ -28,7 +28,7 @@ Se comenzará realizando las configuraciones necesarias en AWS IoT Core
 - Usaremos la opción de generar automáticamente un certificado nuevo, con eso AWS nos generará algunos certificados que debemos descargar. Se recomienda guardar los certificados en una carpeta para tenerlos todos juntos.
 
 
-1. **Configuración de la Raspberry Pi**
+2. **Configuración de la Raspberry Pi**
 
 En este tutorial se sobre entiende que la Raspberry Pi ya está cargada con el sistema operativo Debian. 
 
@@ -53,7 +53,7 @@ Ahora deberemos configurar el código para realizar el envió de mensaje con AWS
 - Pasaremos en el mismo código a configurar la leída de datos del sensor DHT11 y crear un ID y el tiempo en que se toma cada muestra para pasar a enviar todos estos datos en el formato para que lo entienda el protocolo MQTT.
 
 
-1. **Configuración de Lambda**
+3. **Configuración de Lambda**
 - Para la configuración de AWS Lambda Iniciaremos creado una función Lambda. En este ejemplo uso JSON como código para la función. Pero antes de configurar el código iremos a conectarla a IoT Core.
 
 - Para esto vamos a necesitar configurar el motor de reglas para ello iremos a direccionamiento de mensajería, y en reglas crearemos una nueva. Para poder crear una regla se necesita usar el formato SQL. Para este proyecto se usará la regla [select \* from 'DHT11/data'] y en la parte de acciones escogeremos Lambda y la función Lambda que creamos.
@@ -61,11 +61,11 @@ Ahora deberemos configurar el código para realizar el envió de mensaje con AWS
 Ahora regresaremos a la función Lambda y en la parte del código se usó el siguiente.
 
 
-1. **Configuración de DynamoDB**
+4. **Configuración de DynamoDB**
 - La configuración en Dynamo tiene que estar en regla al código que se usa en la función Lambda. Para esto la clave de participación y la clave de ordenación tienen que ser las mismas que en el código JSON. En este caso se uso serialNumber y timeStamp. Los demás valores de la tabla se pueden configurar al gusto. Pero en el proyecto se usó Temperatura y Humedad.
 
 
-1. **Resultados**
+5. **Resultados**
 
 Lo que se espera en DynamoDB al correr en el código en Raspberry es lo siguiente.
 <img src="https://github.com/IgnacioChirinos/Project-IOT-AWS/blob/main/Resultados.PNG"  width="600" height="300">
